@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
 
 const Note = ({ id, title, content, deleteNote }) => {
+  // TODO: Implement edit note
+  // const [editMode, setEditMode] = useState(false);
+
   const handleDelete = () => {
     deleteNote(id);
   };
@@ -10,9 +13,14 @@ const Note = ({ id, title, content, deleteNote }) => {
     <div className="note">
       <h1>{title}</h1>
       <p>{content}</p>
-      <button className="delete-button" onClick={handleDelete}>
-        <FaTrashAlt />
-      </button>
+      <div className="note-buttons">
+        {/* <button className="edit-button" onClick={handleEdit}>
+          <FaEdit size={28} />
+        </button> */}
+        <button className="delete-button" onClick={handleDelete}>
+          <FaTrashAlt size={28} />
+        </button>
+      </div>
     </div>
   );
 };

@@ -14,8 +14,23 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 16px 32px;
+  padding: 0 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header form {
+  width: 30%;
+}
+
+.search {
+  margin: 0;
+  padding: 0;
+  max-height: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .bulb-image {
@@ -83,8 +98,35 @@ form textarea {
   align-items: center;
 }
 
-.delete-button {
+.note-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.delete-button, .edit-button {
   all: unset;
   cursor: pointer;
-  margin-top: 10px;
+  padding: 4px;
+  margin: 10px 8px 0;
 }
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+.loading-message {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+/* .edit-mode {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: scale(1.5);
+} */
