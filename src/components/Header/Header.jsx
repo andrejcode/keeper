@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegLightbulb } from 'react-icons/fa';
+import './Header.css';
 
 const Header = ({ search, setSearch }) => {
   const handleChange = (e) => {
@@ -12,16 +13,18 @@ const Header = ({ search, setSearch }) => {
         <FaRegLightbulb className="bulb-image" />
         <h1>Keeper</h1>
       </div>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input
-          className="search"
-          type="text"
-          role="searchbox"
-          placeholder="Search for notes"
-          value={search}
-          onChange={handleChange}
-        />
-      </form>
+      <div className="search-form">
+        <form onSubmit={(e) => e.preventDefault()}>
+          <input
+            className="search"
+            type="text"
+            role="searchbox"
+            placeholder="Search for notes"
+            value={search}
+            onChange={handleChange}
+          />
+        </form>
+      </div>
     </header>
   );
 };

@@ -1,6 +1,6 @@
-import Header from './components/Header';
-import AddNote from './components/AddNote';
-import Note from './components/Note';
+import Header from './components/Header/Header';
+import AddNote from './components/AddNote/AddNote';
+import Note from './components/Note/Note';
 import { useEffect, useState } from 'react';
 import apiRequest from './apiRequest';
 

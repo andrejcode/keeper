@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import './AddNote.css';
 
 const AddNote = (props) => {
   const [note, setNote] = useState({ title: '', content: '' });
@@ -30,7 +31,7 @@ const AddNote = (props) => {
 
   return (
     <div>
-      <form className="add-note" onSubmit={(e) => e.preventDefault()}>
+      <form className="add-note-form" onSubmit={(e) => e.preventDefault()}>
         {isExpanded && (
           <input
             name="title"

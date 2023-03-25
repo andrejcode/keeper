@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
+import './Note.css';
 
 const Note = ({ id, title, content, deleteNote }) => {
   // TODO: Implement edit note
