@@ -58,6 +58,29 @@ const App = () => {
     if (result) setFetchError(result);
   };
 
+  const editNote = async (id, title, content) => {
+    // alert(`${id} ${title} ${content}`);
+    const notesList = notes.map((note) =>
+      note.id === id ? { ...note, title: title, content: content } : note
+    );
+    setNotes(notesList);
+
+    const myNote = notesList.filter((note) => note.id === id);
+    const updateOptions = {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: myNote[0].title,
+        content: myNote[0].content
+      })
+    };
+    const reqUrl = `${API_URL}/${id}`;
+    const result = await apiRequest(reqUrl, updateOptions);
+    if (result) setFetchError(result);
+  };
+
   return (
     <div className="App">
       <Header search={search} setSearch={setSearch} />
@@ -83,6 +106,7 @@ const App = () => {
                   title={noteItem.title}
                   content={noteItem.content}
                   deleteNote={deleteNote}
+                  editNote={editNote}
                 />
               );
             })}

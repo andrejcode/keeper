@@ -31,13 +31,6 @@
   margin: 10px 8px 0;
 }
 
-/* .edit-mode {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: scale(1.5);
-} */
-
 @media screen and (max-width: 768px) {
   .note {
     float: unset;
