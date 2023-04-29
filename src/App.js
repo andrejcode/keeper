@@ -59,7 +59,6 @@ const App = () => {
   };
 
   const editNote = async (id, title, content) => {
-    // alert(`${id} ${title} ${content}`);
     const notesList = notes.map((note) =>
       note.id === id ? { ...note, title: title, content: content } : note
     );
