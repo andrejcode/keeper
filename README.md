@@ -4,7 +4,7 @@ React To-Do List application based on Google Keep.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To start JSON Server run `npx json-server -p 3500 -w data/db.json`
+To start JSON Server run `npm run server`
 
 ## Available Scripts
 
